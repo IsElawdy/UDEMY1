@@ -41,7 +41,6 @@ int main()
             anzahl++;
         }
     }
-
     input.close();
 
     // Schleife die solange laeuft bis der Nutzer 'x' eingibt
