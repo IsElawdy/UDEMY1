@@ -61,7 +61,7 @@ int main()
         // Befehl von Nutzer einlesen
         cin >> eingabe;
         cout << endl;
-
+        anzahl = 30; // das habe ich geschrieben, ich denke, Anzahl in cases war nicht richtig definiert
         // Bearbeiten des Befehls
         switch (eingabe)
         {
@@ -161,10 +161,11 @@ int main()
 
         case '6':
         {
-            if (anz)
+            if (anzahl)
             {
                 char del[31];
-                cout << "Name des MA: " cin >> del;
+                cout << "Name des MA: ";
+                cin >> del;
                 int del_index = -1;
                 for (int i = 0; i < anzahl; i++)
                     if (strcmp(del, personal[i].name) == 0)
