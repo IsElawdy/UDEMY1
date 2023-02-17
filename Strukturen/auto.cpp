@@ -67,7 +67,7 @@ int main(void)
     cout << "Bitte geben Sie Ihre Lieblingsmarke ein (max. 20 Zeichen): ";
     cin >> l_marke;
 
-    for (i = 0; i < 10; i++)
+    for (int i = 0; i < 10; i++)
     {
         if (strcmp(pkws[i].marke, l_marke) == 0)
             check = true;
