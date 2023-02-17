@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>&#34;Grundlagen der Informatik&#34;</TITLE>
+<META NAME="description" CONTENT="&#34;Grundlagen der Informatik&#34;">
+<META NAME="keywords" CONTENT="musteraufg">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="musteraufg.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<!--End of Navigation Panel-->
+<H1 ALIGN="CENTER">&#34;Grundlagen der Informatik&#34;</H1>
+<DIV>
+
+<P ALIGN="CENTER"><STRONG>Beispielaufgabe</STRONG></P>
+<P ALIGN="CENTER"><STRONG>Mai 2006</STRONG></P>
+</DIV>
+
+<P>
+<DL COMPACT>
+<DT>1.</DT>
+<DD>Dynamische Datenstrukturen
+
+<P>
+Gegeben sei folgendes C++-Programm:
+<BR><PRE>
+#include &lt;iostream&gt;
+using namespace std;
+struct p{
+        int a;p * pNext;
+        };
+main()
+{
+   p * pAnker, * pNeu;
+   int i = 0;
+   pAnker = new p;
+   cin &gt;&gt; pAnker -&gt; a;
+   pAnker -&gt; pNext = pAnker;
+    while (i &lt; 6)
+      {
+         pNeu = new p; cin &gt;&gt; pNeu -&gt; a;
+         pNeu -&gt; pNext = pAnker -&gt; pNext;
+         pAnker -&gt; pNext = pNeu;
+         i++;
+      }
+}
+</PRE>
+
+<P>
+<DL COMPACT>
+<DT>1.</DT>
+<DD>Stellen Sie die Datenstruktur grafisch dar, die in diesem Programm aufgebaut 
+wird (inklusive aller vorkommenden Zeiger nach Abarbeitung des Programms). Die Abarbeitungsreihenfolge beim Aufbau der Datenstruktur mu&#223; erkennbar sein.
+
+<P>
+</DD>
+<DT>2.</DT>
+<DD>Erg&#228;nzen Sie das Programm um eine Funktion 
+<PRE>
+int insert (int b, int a, p * pAnker1)
+</PRE>
+mit folgendem Ablauf:
+<DL COMPACT>
+<DT>1.</DT>
+<DD>Suchen eines Elementes in der Datenstruktur, dessen Datenelement a gleich dem Parameter a ist. Ist kein solches Element enthalten, so wird von der Funktion der Wert 1 zur&#252;ckgegeben.
+</DD>
+<DT>2.</DT>
+<DD>Einf&#252;gen eines Elementes mit dem Datenelement b in die Datenstruktur unmittelbar nach dem in 1. gefundenen Element. Gelingt das Einf&#252;gen, ist der Wert 0 zur&#252;ckzugeben, wenn nicht, dann wird der Wert -1 zur&#252;ckgegeben.
+</DD>
+</DL> 
+Demonstrieren Sie die Verwendung der Funktion <B>insert</B>.
+
+<P>
+</DD>
+<DT>3.</DT>
+<DD>Erg&#228;nzen Sie das Hauptprogramm derart, da&#223; alle a-Instanzen (Elemente a)  der Elemente der Datenstruktur ausgegeben werden.
+Dabei sollen maximal 4 Elemente auf einer Bildschirmzeile stehen.
+</DD>
+</DL>
+</DD>
+</DL>
+<BR><HR>
+<!--Table of Child-Links-->
+<!--End of Table of Child-Links-->
+<ADDRESS>
+Dr.Andreas Mueller
+12.5.2006
+</ADDRESS>
+</BODY>
+</HTML>

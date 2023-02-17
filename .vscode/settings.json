@@ -1,0 +1,7 @@
+{
+    "CodeGPT.query.language": "German",
+    "files.associations": {
+        "iostream": "cpp",
+        "ostream": "cpp"
+    }
+}

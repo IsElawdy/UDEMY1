@@ -1,0 +1,45 @@
+// local.cpp -- Local variables demonstration
+
+#include <iostream>
+using namespace std;
+void pause(void);
+void function1(void);
+void function2(void);
+
+main()
+{
+   function1();
+}
+
+void pause(void)
+{
+   char a;
+   cout << "Press <Char> + <ent> to continue...";
+   cin >> a ;
+}
+
+void function1(void)
+{
+   char s[15] = "Philadelphia\n";
+
+   cout << "\nBegin function #1.   s = " << s;
+   pause();
+
+   function2();   // Call function2 from function1
+
+   cout << "\nBack in function #1. s = " << s;
+}
+
+void function2(void)
+{
+   char s[15] = "San Francisco\n";
+
+   cout << "\nBegin function #2.   s = " << s;
+   pause();
+}
+
+
+// Copyright (c) 1990 by Tom Swan. All rights reserved
+// Revision 1.00    Date: 08/22/1990   Time: 08:49 pm
+// Changed to the new Standard: 07/24/2004 Andreas Mueller
+
